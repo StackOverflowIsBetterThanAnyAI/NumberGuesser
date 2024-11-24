@@ -12,13 +12,15 @@ public class CheckFinish {
                     return tryCounter;
                 }
 
-                if (argsNum <= random + 5 && argsNum >= random - 5) {
+                int difference = Math.abs(argsNum - random);
+
+                if (difference <= 5) {
                     System.out.println("You are very close to guessing the correct number. (+/- 5)");
-                } else if (argsNum <= random + 10 && argsNum >= random - 10) {
+                } else if (difference <= 10) {
                     System.out.println("You are quite close to guessing the correct number. (+/- 10)");
-                } else if (argsNum <= random + 15 && argsNum >= random - 15) {
+                } else if (difference <= 15) {
                     System.out.println("You are close to guessing the correct number. (+/- 15)");
-                } else if (argsNum <= random + 25 && argsNum >= random - 25) {
+                } else if (difference <= 25) {
                     System.out.println("You are quite far away from guessing the correct number. (+/- 25)");
                 } else {
                     System.out.println("You are not even remotely close to guessing the correct number.");
